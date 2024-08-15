@@ -1,23 +1,23 @@
 ---
-import Layout from "@layouts/Layout.astro";
-import Header from "@components/Header.astro";
-import Footer from "@components/Footer.astro";
-import LinkButton from "@components/LinkButton.astro";
-import Socials from "@components/Socials.astro";
-import CardIndex from "@components/CardIndex.astro";
+import Layout from '@layouts/Layout.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+// import LinkButton from "@components/LinkButton.astro";
+import Socials from '@components/Socials.astro';
+import CardIndex from '@components/CardIndex.astro';
 // import PostsIndex from "@components/PostsIndex.astro";
-import { SOCIALS } from "@config";
+import { SOCIALS } from '@config';
 
 const socialCount = SOCIALS.filter(social => social.active).length;
 ---
 
 <Layout>
   <Header />
-  <main id="main-content">
-    <section id="hero">
+  <main id='main-content'>
+    <section id='hero'>
       <h1>Deregital</h1>
 
-      <p class="text-justify">
+      <p class='text-justify'>
         ¡Hola! Somos <b>deregital</b>, el acompañamiento que tu organización
         necesita para atravesar el complejo camino de la <u
           >transformación digital.</u
@@ -39,8 +39,8 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       {
         // only display if at least one social link is enabled
         socialCount > 0 && (
-          <div class="social-wrapper">
-            <div class="social-links">Links:</div>
+          <div class='social-wrapper'>
+            <div class='social-links'>Links:</div>
             <Socials />
           </div>
         )
@@ -49,18 +49,18 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
     <section>
       <h1>Quiénes somos</h1>
-      <p class="text-justify">
-        Somos una consultora joven, apasionada por la tecnología y con una <b
-          >red de más de 20 profesionales</b
-        > en el rubro tecnológico y de negocios. <br />
+      <p class='text-justify'>
+        Somos una consultora joven, apasionada por la tecnología y con una
+        <b>red de más de 20 profesionales</b> en el rubro tecnológico y de negocios.
+        <br />
         Tenemos un <b>enfoque sistémico</b> que nos distingue, es decir, que analizamos
         cómo un cambio en un proceso va a afectar a todo el resto del ecosistema.<br
         />
 
         Creemos en el software como una herramienta muy poderosa, pero que solo
-        tiene sentido <b>cuando se integra de manera estratégica</b> en el negocio
-        de nuestros clientes, teniendo en cuenta el impacto que pueden generar estos
-        cambios.
+        tiene sentido
+        <b>cuando se integra de manera estratégica</b> en el negocio de nuestros
+        clientes, teniendo en cuenta el impacto que pueden generar estos cambios.
         <br /><br />
 
         Contamos con colaboradores con intereses y áreas de conocimiento que van
@@ -69,7 +69,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         /><br />
 
         <b
-          >No solo hacemos código; nos convertimos en socios estratégicos en tu
+          >No solo hacemos código, nos convertimos en socios estratégicos en tu
           camino hacia el crecimiento y la modernización.</b
         >
       </p>
@@ -77,53 +77,84 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
     <section>
       <h1>Nuestros productos</h1>
-      <div class="grid grid-cols-2 grid-rows-1 gap-x-4">
+      <div
+        class='md:grid-cols-2 md:grid-rows-1 grid grid-cols-1 grid-rows-2 gap-4'
+      >
         {/*VER DE PODER PONER NEGRITAS EN ESTA CARD!!*/}
-        <CardIndex
-          title="Consultoría y desarrollos a medida"
-          desc={`Ofrecemos servicios de consultoría para encontrar la solución más adecuada para tus problemas. Analizamos a fondo tus procesos y necesidades, tanto para recomendar como para desarrollar sistemas que realmente te ayuden.
-          A todos nuestros clientes se les asigna un agente de Customer Success, que te va a acompañar en cada paso que tomes, desde conocer tu negocio, desarrollo de soluciones, hasta la implementación y asegurarse del éxito de la misma.`}
-          href="#"
-        />
-        <CardIndex
-          title="E-Manager"
-          desc={`Si el recurso principal de tu negocio son las relaciones que tenés con tus clientes, pero necesitás escalar la forma de relacionarte con ellos, E-Manager es la solución para vos.
-            E-Manager es nuestra primera aplicación B2B que desarrollamos para que puedas conocer a tus clientes a la perfección.
-            - CRM para llevar un registro de tus contactos
-            - Vinculación con WhatsApp, para automatizar y envíar mensajes masivos.
-            - Etiquetado avanzado para cada uno de tus clientes`}
-          href="#"
-        />
+        <CardIndex title='Consultoría y desarrollos a medida' href='#'>
+          <span>
+            Ofrecemos servicios de consultoría para encontrar la solución más
+            adecuada para tus problemas. Analizamos a fondo tus procesos y
+            necesidades, tanto para recomendar como para desarrollar sistemas
+            que realmente te ayuden. <br /> A todos nuestros clientes se les asigna
+            un agente de Customer Success, que te va a acompañar en cada paso que
+            tomes, desde conocer tu negocio, desarrollo de soluciones, hasta la implementación
+            y asegurarse del éxito de la misma.
+          </span>
+        </CardIndex>
+        <CardIndex title='E-Manager' href='#'>
+          <span>
+            Si el recurso principal de tu negocio son las relaciones que tenés
+            con tus clientes, pero necesitás escalar la forma de relacionarte
+            con ellos, <span class='whitespace-nowrap'>E-Manager</span> es la solución
+            para vos. <br /> E-Manager es nuestra primera aplicación B2B que desarrollamos
+            para que puedas conocer a tus clientes a la perfección.
+            <ul class='list-outside list-disc pl-6'>
+              <li>CRM para llevar un registro de tus contactos.</li>
+              <li>
+                Vinculación con WhatsApp, para automatizar y envíar mensajes
+                masivos.
+              </li>
+              <li>Etiquetado avanzado para cada uno de tus clientes.</li>
+            </ul>
+          </span>
+        </CardIndex>
       </div>
     </section>
 
     <section>
       <h1>Clientes</h1>
-      <div class="grid grid-cols-2 grid-rows-1 gap-x-4">
+      <div
+        class='md:grid-cols-2 md:grid-rows-1 grid grid-cols-1 grid-rows-2 gap-4'
+      >
         <!-- FIJATE DE CENTRAR LAS DOS FOTOS DE LOS LOGOS! -->
         <!-- ORGANICEMOS BIEN LAS FOTOS DE LAS APPS -->
         <div>
-          <img src="/logo-osmosys.png" alt="Osmosys" />
-          <img src="/osmosys-app.jpg" alt="Osmosys" />
-          <h3 class="mt-2 text-xl font-bold">Osmosys</h3>
+          <img
+            src='/logo-osmosys.png'
+            class='object-fit md:w-fit md:max-h-24 mx-auto w-full max-w-[75%] pb-2'
+            alt='Osmosys'
+          />
+          <img src='/osmosys-app.jpg' alt='Osmosys' />
+          <h3 class='mt-2 text-xl font-bold'>Osmosys</h3>
           <p>
             Desarrollamos la <b>aplicación mobile</b> de <u
-              ><a href="https://osmosyslab.com/">Osmosys</a></u
+              ><a href='https://osmosyslab.com/'>Osmosys</a></u
             > quien confió en nosotros para llevar su idea a la realidad. <br />
             Esta aplicación es usada para llevar a cabo la gestión integral de reactivos
             en <b>laboratorios de clase mundial.</b>
           </p>
         </div>
         <div>
-          <img src="/expodesfiles.png" alt="Expo Desfiles" />
-          <img src="/expomanager-funciones.jpg" alt="Expo Desfiles" />
-          <h3 class="mt-2 text-xl font-bold">Expo Desfiles</h3>
+          <img
+            src='/expodesfiles.png'
+            class='object-fit md:w-fit md:max-h-24 mx-auto w-full max-w-[75%] pb-2'
+            alt='Expo Desfiles'
+          />
+          <img src='/expomanager-funciones.jpg' alt='Expo Desfiles' />
+          <h3 class='mt-2 text-xl font-bold'>Expo Desfiles</h3>
           <p>
-            <u><a href="https://expodesfiles.com/plataforma">Expo Desfiles</a></u> es el primer
-            usuario de E-Manager, donde gestiona a <b>miles de modelos de moda</b>, organiza
-            eventos y desfiles todas las semanas, y mantiene una <b>vía de comunicación
-            constante con sus modelos.</b> <br />
-            Gracias a E-manager, están logrando escalar su plataforma a más y más personas en todo Argentina.
+            <u
+              ><a href='https://expodesfiles.com/plataforma'>Expo Desfiles</a
+              ></u
+            > es el primer usuario de E-Manager, donde gestiona a <b
+              >miles de modelos de moda</b
+            >, organiza eventos y desfiles todas las semanas, y mantiene una <b
+              >vía de comunicación constante con sus modelos.</b
+            >
+            <br />
+            Gracias a E-manager, están logrando escalar su plataforma a más y más
+            personas en todo Argentina.
           </p>
         </div>
       </div>
