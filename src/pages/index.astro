@@ -19,11 +19,14 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
       <p class="text-justify">
         ¡Hola! Somos <b>deregital</b>, el acompañamiento que tu organización
-        necesita para atravesar el complejo camino de la transformación digital. <br
-        />
-        Empoderamos emprendedores y negocios a través de soluciones y desarrollos
-        tecnológicos personalizados y acompañamiento estratégico continuo, que va
-        mucho más allá del software.
+        necesita para atravesar el complejo camino de la <u
+          >transformación digital.</u
+        >
+        <br />
+        Empoderamos emprendedores y negocios a través de <b
+          >soluciones y desarrollos tecnológicos</b
+        > personalizados y acompañamiento estratégico continuo, que va mucho más
+        allá del software.
       </p>
       <!-- Read the blog posts or check
           <LinkButton
@@ -47,25 +50,35 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     <section>
       <h1>Quiénes somos</h1>
       <p class="text-justify">
-        Somos una <u>consultora joven</u>, apasionada por la tecnología y con
-        una red de profesionales en el rubro tecnológico y de negocios. <br />
-        Tenemos un enfoque sistémico que nos distingue. Creemos en el software como
-        una herramienta muy poderosa, pero que solo tiene sentido cuando se integra
-        de manera estratégica en el negocio de nuestros clientes, teniendo en cuenta
-        el impacto que pueden generar estos cambios. <br />
+        Somos una consultora joven, apasionada por la tecnología y con una <b
+          >red de más de 20 profesionales</b
+        > en el rubro tecnológico y de negocios. <br />
+        Tenemos un <b>enfoque sistémico</b> que nos distingue, es decir, que analizamos
+        cómo un cambio en un proceso va a afectar a todo el resto del ecosistema.<br
+        />
+
+        Creemos en el software como una herramienta muy poderosa, pero que solo
+        tiene sentido <b>cuando se integra de manera estratégica</b> en el negocio
+        de nuestros clientes, teniendo en cuenta el impacto que pueden generar estos
+        cambios.
+        <br /><br />
 
         Contamos con colaboradores con intereses y áreas de conocimiento que van
         más allá de la tecnología, lo que nos permite abordar los desafíos desde
-        múltiples perspectivas, y encontrar las soluciones más adecuadas. <br />
+        <b>múltiples perspectivas</b>, y encontrar las soluciones más adecuadas. <br
+        /><br />
 
-        No solo hacemos código; nos convertimos en socios estratégicos en tu
-        camino hacia el crecimiento y la modernización.
+        <b
+          >No solo hacemos código; nos convertimos en socios estratégicos en tu
+          camino hacia el crecimiento y la modernización.</b
+        >
       </p>
     </section>
 
     <section>
       <h1>Nuestros productos</h1>
       <div class="grid grid-cols-2 grid-rows-1 gap-x-4">
+        {/*VER DE PODER PONER NEGRITAS EN ESTA CARD!!*/}
         <CardIndex
           title="Consultoría y desarrollos a medida"
           desc={`Ofrecemos servicios de consultoría para encontrar la solución más adecuada para tus problemas. Analizamos a fondo tus procesos y necesidades, tanto para recomendar como para desarrollar sistemas que realmente te ayuden.
@@ -87,24 +100,30 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     <section>
       <h1>Clientes</h1>
       <div class="grid grid-cols-2 grid-rows-1 gap-x-4">
+        <!-- FIJATE DE CENTRAR LAS DOS FOTOS DE LOS LOGOS! -->
+        <!-- ORGANICEMOS BIEN LAS FOTOS DE LAS APPS -->
         <div>
-          <img src="https://placehold.co/360x200" alt="Osmosys" />
+          <img src="/logo-osmosys.png" alt="Osmosys" />
+          <img src="/osmosys-app.jpg" alt="Osmosys" />
           <h3 class="mt-2 text-xl font-bold">Osmosys</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt
-            excepturi illo eum odio, est perspiciatis atque doloribus pariatur,
-            explicabo minus distinctio. Ad nemo eligendi cum obcaecati
-            perspiciatis reiciendis praesentium. Totam.
+            Desarrollamos la <b>aplicación mobile</b> de <u
+              ><a href="https://osmosyslab.com/">Osmosys</a></u
+            > quien confió en nosotros para llevar su idea a la realidad. <br />
+            Esta aplicación es usada para llevar a cabo la gestión integral de reactivos
+            en <b>laboratorios de clase mundial.</b>
           </p>
         </div>
         <div>
-          <img src="https://placehold.co/360x200" alt="Expo Desfiles" />
+          <img src="/expodesfiles.png" alt="Expo Desfiles" />
+          <img src="/expomanager-funciones.jpg" alt="Expo Desfiles" />
           <h3 class="mt-2 text-xl font-bold">Expo Desfiles</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt
-            excepturi illo eum odio, est perspiciatis atque doloribus pariatur,
-            explicabo minus distinctio. Ad nemo eligendi cum obcaecati
-            perspiciatis reiciendis praesentium. Totam.
+            <u><a href="https://expodesfiles.com/plataforma">Expo Desfiles</a></u> es el primer
+            usuario de E-Manager, donde gestiona a <b>miles de modelos de moda</b>, organiza
+            eventos y desfiles todas las semanas, y mantiene una <b>vía de comunicación
+            constante con sus modelos.</b> <br />
+            Gracias a E-manager, están logrando escalar su plataforma a más y más personas en todo Argentina.
           </p>
         </div>
       </div>
