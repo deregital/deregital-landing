@@ -12,7 +12,7 @@ export interface Props {
 const { activeNav } = Astro.props;
 ---
 
-<header>
+<header class='fixed top-0 z-50 w-full bg-skin-fill'>
   <a
     class='absolute -top-full left-16 z-50 bg-skin-accent px-3 py-2 text-skin-inverted transition-all focus:top-4'
     href='#main-content'>Skip to content</a
@@ -27,7 +27,7 @@ const { activeNav } = Astro.props;
         <div class='flex w-full items-center justify-between'>
           <a
             href='/'
-            class='whitespace-nowrap text-xl font-semibold sm:static sm:text-2xl'
+            class='h-20 w-20 whitespace-nowrap pt-2 text-xl font-semibold sm:static sm:text-2xl'
           >
             {LOGO_IMAGE.enable ? <Logo /> : SITE.title}
           </a>

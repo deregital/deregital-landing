@@ -5,6 +5,7 @@ import Footer from '@components/Footer.astro';
 // import LinkButton from "@components/LinkButton.astro";
 import Socials from '@components/Socials.astro';
 import CardIndex from '@components/CardIndex.astro';
+import Logo from '@components/Logo.astro';
 // import PostsIndex from "@components/PostsIndex.astro";
 import { SOCIALS } from '@config';
 
@@ -13,9 +14,13 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
 <Layout>
   <Header />
-  <main id='main-content'>
-    <section id='hero'>
-      <h1>Deregital</h1>
+  <main id='main-content' class='mt-20'>
+    <section id='hero' class='pt-4'>
+      <!-- <h1>Deregital</h1> -->
+
+      <div class='h-40 w-40'>
+        <Logo />
+      </div>
 
       <p class='text-justify'>
         ¡Hola! Somos <b>deregital</b>, el acompañamiento que tu organización
@@ -78,7 +83,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     <section>
       <h1>Nuestros productos</h1>
       <div
-        class='md:grid-cols-2 md:grid-rows-1 grid grid-cols-1 grid-rows-2 gap-4'
+        class='grid grid-cols-1 grid-rows-2 gap-4 md:grid-cols-2 md:grid-rows-1'
       >
         {/*VER DE PODER PONER NEGRITAS EN ESTA CARD!!*/}
         <CardIndex title='Consultoría y desarrollos a medida'>
@@ -115,14 +120,14 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     <section>
       <h1>Clientes</h1>
       <div
-        class='md:grid-cols-2 md:grid-rows-1 grid grid-cols-1 grid-rows-2 gap-4'
+        class='grid grid-cols-1 grid-rows-2 gap-4 md:grid-cols-2 md:grid-rows-1'
       >
         <!-- FIJATE DE CENTRAR LAS DOS FOTOS DE LOS LOGOS! -->
         <!-- ORGANICEMOS BIEN LAS FOTOS DE LAS APPS -->
         <div>
           <img
             src='/logo-osmosys.png'
-            class='object-fit md:w-fit md:max-h-24 mx-auto w-full max-w-[75%] pb-2'
+            class='object-fit mx-auto w-full max-w-[75%] pb-2 md:max-h-24 md:w-fit'
             alt='Osmosys'
           />
           <img src='/osmosys-app.jpg' alt='Osmosys' />
@@ -138,7 +143,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         <div>
           <img
             src='/expodesfiles.png'
-            class='object-fit md:w-fit md:max-h-24 mx-auto w-full max-w-[75%] pb-2'
+            class='object-fit mx-auto w-full max-w-[75%] pb-2 md:max-h-24 md:w-fit'
             alt='Expo Desfiles'
           />
           <img src='/expomanager-funciones.jpg' alt='Expo Desfiles' />
