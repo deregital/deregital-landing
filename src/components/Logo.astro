@@ -1,4 +1,22 @@
-<div class='h-full w-full'>
-  <img class='block dark:hidden' src='/deregital-logo-light.png' />
-  <img class='hidden dark:block' src='/deregital-logo-dark.png' />
+---
+import { cn } from '../utils/cn';
+export interface Props {
+  className?: string;
+  type: 'isotipo' | 'logotipo';
+}
+
+const { className, type } = Astro.props;
+
+const srcs: Record<Props['type'], { dark: string; light: string }> = {
+  isotipo: {
+    light: '/deregital-isotipo.png',
+    dark: '/deregital-isotipo-dark.png',
+  },
+  logotipo: { light: '/deregital-logo.png', dark: '/deregital-logo-dark.png' },
+};
+---
+
+<div class={cn('max-h-full w-fit', className)}>
+  <img class='hidden max-h-[inherit] dark:block' src={srcs[type].dark} />
+  <img class='block max-h-[inherit] dark:hidden' src={srcs[type].light} />
 </div>

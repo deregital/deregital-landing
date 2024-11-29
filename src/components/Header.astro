@@ -3,13 +3,13 @@ import { LOGO_IMAGE, SITE } from '@config';
 import Hr from './Hr.astro';
 import Logo from '@components/Logo.astro';
 import ThemeToggle from '@components/ThemeToggle.astro';
-import NavbarExtendida from '@components/NavbarExtendida.astro';
+// import NavbarExtendida from '@components/NavbarExtendida.astro';
 
 export interface Props {
   activeNav?: 'posts' | 'tags' | 'about' | 'search';
 }
 
-const { activeNav } = Astro.props;
+// const { activeNav } = Astro.props;
 ---
 
 <header class='fixed top-0 z-50 w-full bg-skin-fill'>
@@ -27,9 +27,15 @@ const { activeNav } = Astro.props;
         <div class='flex w-full items-center justify-between'>
           <a
             href='/'
-            class='h-20 w-20 whitespace-nowrap pt-2 text-xl font-semibold sm:static sm:text-2xl'
+            class='whitespace-nowrap pt-2 text-xl font-semibold sm:static sm:text-2xl'
           >
-            {LOGO_IMAGE.enable ? <Logo /> : SITE.title}
+            {
+              LOGO_IMAGE.enable ? (
+                <Logo type={'isotipo'} className={'h-20'} />
+              ) : (
+                SITE.title
+              )
+            }
           </a>
           <div class='flex w-full items-center justify-end gap-x-4'>
             <ThemeToggle />
